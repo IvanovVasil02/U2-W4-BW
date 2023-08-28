@@ -52,4 +52,11 @@ main {
       margin-bottom: 0 !important;
     }
   }
+  #cont-generic-playlists {
+    .col {
+      .row {
+        max-height: 100px;
+      }
+    }
+  }
 }

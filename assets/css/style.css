@@ -10763,4 +10763,7 @@ main p {
 }
 main #cont-playlists p {
   margin-bottom: 0 !important;
+}
+main #cont-generic-playlists .col .row {
+  max-height: 100px;
 }/*# sourceMappingURL=style.css.map */
