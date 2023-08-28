@@ -10720,9 +10720,10 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-color: rgb(155, 152, 152);
   margin: 0;
   padding: 0;
+  background-image: linear-gradient(#1e1e1e, #121212);
+  color: #fff;
 }
 
 a {
@@ -10737,9 +10738,6 @@ li i {
   padding-right: 2px;
 }
 
-nav {
-  height: 100vh;
-}
 nav ul {
   padding-left: 0;
 }
