@@ -1,5 +1,39 @@
+@import "./variables";
 @import "./bootstrapOverrided.scss";
 
 body {
   background-color: rgb(155, 152, 152);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style-type: none;
+  i {
+    padding-right: 2px;
+  }
+}
+
+nav {
+  height: 100vh;
+  ul {
+    padding-left: 0;
+    li {
+      color: #707070;
+      a {
+        color: #707070;
+      }
+    }
+  }
+}
+
+main {
+  .row {
+    border: 1px solid black;
+  }
 }
