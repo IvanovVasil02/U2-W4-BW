@@ -10750,9 +10750,6 @@ nav ul li a {
   color: #707070;
 }
 
-main .row {
-  border: 1px solid black;
-}
 main .back,
 main .next {
   background-color: #131313;
