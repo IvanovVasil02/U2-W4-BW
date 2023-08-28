@@ -36,4 +36,19 @@ main {
   .row {
     border: 1px solid black;
   }
+
+  .back,
+  .next {
+    background-color: #131313;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+  }
+
+  p {
+    color: #fff;
+  }
 }
