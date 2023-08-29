@@ -4,7 +4,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(#1e1e1e, #121212);
+  background-image: linear-gradient(#212121, #121212);
   background-repeat: no-repeat;
   color: #fff;
 
@@ -39,26 +39,20 @@ nav {
   }
 }
 
-main {
-  p {
-    color: #fff;
-  }
-  #cont-playlists {
-    p {
-      margin-bottom: 0 !important;
-    }
-  }
-  #cont-generic-playlists {
-    .col {
-      .row {
-        max-height: 100px;
-      }
+p {
+  color: #fff;
+}
+
+#cont-generic-playlists {
+  .col {
+    .row {
+      max-height: 100px;
     }
   }
 }
 
 #main-card {
-  background-image: linear-gradient(to left, #1e1e1e, #010101);
+  background-image: linear-gradient(to bottom, #1e1e1e, #010101);
   padding: 0.2rem;
   border: none;
 
@@ -87,5 +81,9 @@ main {
     p {
       font-size: 0.7rem;
     }
+  }
+
+  i {
+    font-size: 1.4rem;
   }
 }
