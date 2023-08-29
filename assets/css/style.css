@@ -10791,4 +10791,11 @@ p {
 }
 #friends i {
   font-size: 1.4rem;
+}
+
+#riprod-btn button i {
+  font-size: 1.5rem;
+}
+#riprod-btn #playgreen-btn i {
+  font-size: 3rem;
 }/*# sourceMappingURL=style.css.map */
