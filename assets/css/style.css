@@ -68,8 +68,8 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #0d6efd;
-  --bs-link-hover-color: #0a58ca;
+  --bs-link-color: #fff;
+  --bs-link-hover-color: #cccccc;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -10748,6 +10748,17 @@ nav ul li a {
   color: #707070;
 }
 
+main #main-card {
+  background-image: linear-gradient(to left, #1e1e1e, #010101);
+  padding: 0.2rem;
+}
+main #main-card img {
+  max-height: 13rem;
+  max-width: 13rem;
+}
+main #main-card h6, main #main-card .h6 {
+  font-size: 0.8rem;
+}
 main .back,
 main .next {
   background-color: #131313;
@@ -10766,4 +10777,8 @@ main #cont-playlists p {
 }
 main #cont-generic-playlists .col .row {
   max-height: 100px;
+}
+
+#friends .friends-card p {
+  font-size: 0.7rem;
 }/*# sourceMappingURL=style.css.map */

@@ -33,6 +33,19 @@ nav {
 }
 
 main {
+  #main-card {
+    background-image: linear-gradient(to left, #1e1e1e, #010101);
+    padding: 0.2rem;
+
+    img {
+      max-height: 13rem;
+      max-width: 13rem;
+    }
+
+    h6 {
+      font-size: 0.8rem;
+    }
+  }
   .back,
   .next {
     background-color: #131313;
@@ -57,6 +70,14 @@ main {
       .row {
         max-height: 100px;
       }
+    }
+  }
+}
+
+#friends {
+  .friends-card {
+    p {
+      font-size: 0.7rem;
     }
   }
 }
