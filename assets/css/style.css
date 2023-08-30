@@ -5,6 +5,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import "../css/circular-font.css";
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10725,6 +10726,8 @@ body {
   background-image: linear-gradient(#212121, #121212);
   background-repeat: no-repeat;
   color: #fff;
+  line-height: 2;
+  font-family: "circular";
 }
 body #side-bar,
 body #main,
@@ -10767,6 +10770,13 @@ p {
   padding: 0.2rem;
   border: none;
 }
+#main-card h1, #main-card .h1 {
+  font-size: 4rem;
+  font-family: "Circular";
+  src: url(../fonts/CircularStd-Medium.otf);
+  font-weight: 500;
+  font-style: normal;
+}
 #main-card img {
   max-height: 13rem;
   max-width: 13rem;
@@ -10798,4 +10808,13 @@ p {
 }
 #riprod-btn #playgreen-btn i {
   font-size: 3rem;
+}
+
+#album-list-songs h6, #album-list-songs .h6 {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+#album-list-songs p {
+  color: #6c757d;
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */

@@ -51,13 +51,13 @@
         </div>
 
         <!-- card centrale -->
-        <div class="col-12 col-lg-8 min-vh-100 px-5 pt-2" id="main">
+        <div class="col-12 col-lg-8 min-vh-100 p-0 border-0" id="main">
           <div class="card mb-3" id="main-card">
             <div class="row g-0 p-3">
-              <div class="col-3 d-flex align-items-center">
+              <div class="col-auto d-flex align-items-center">
                 <img src="./assets/imgs/main/image-10.jpg" class="img-fluid w-100" alt="non conosco questa foto" />
               </div>
-              <div class="col-9 d-flex flex-column align-items-start ps-2">
+              <div class="col-auto d-flex flex-column align-items-start ps-4">
                 <div class="card-body d-flex flex-column w-100 p-0 justify-content-end">
                   <h6>ALBUM</h6>
 
@@ -80,7 +80,7 @@
           <!-- bottoni sopra lista canzoni -->
 
           <div class="row">
-            <div class="d-flex" id="riprod-btn">
+            <div class="d-flex px-5" id="riprod-btn">
               <button class="btn p-0" id="playgreen-btn">
                 <i class="bi bi-play-circle-fill text-success"></i>
               </button>
@@ -89,30 +89,38 @@
               <button class="btn"><i class="bi bi-three-dots text-white"></i></button>
             </div>
 
-            <!-- <div class="col">
-              <div class="row">
-                <div class="col d-flex">
-                  <p class="pe-3">#</p>
-                  <p>TITOLO</p>
+            <div class="col mt-4 px-5">
+              <div class="container-fluid px-3" id="album-list-songs">
+                <div class="row border-bottom border-secondary mb-3">
+                  <div class="col d-flex flex-nowrap ps-3 pb-2"><span class="pe-3">#</span> TITOLO</div>
+                  <div class="col d-flex justify-content-end">RIPRODUZIONI</div>
+                  <div class="col d-flex justify-content-end pe-4"><i class="bi bi-clock"></i></div>
                 </div>
-                <div class="col text-end">
-                  <p>Riproduzioni</p>
+
+                <div class="row">
+                  <div class="col d-flex align-items-center pt-2">
+                    <span class="pe-3 ps-1">1.</span>
+                    <div class="title-song d-flex flex-column justify-content-center">
+                      <h6>Montanelli-intro</h6>
+                      <p>Pinguini Tattici Nucleari</p>
+                    </div>
+                  </div>
+                  <div class="col d-flex justify-content-end align-items-center"><p>646.987</p></div>
+                  <div class="col d-flex justify-content-end align-items-center pe-4"><p>1:28</p></div>
                 </div>
-                <div class="col text-end">
-                  <p><i class="bi bi-clock"></i></p>
+
+                <div class="row">
+                  <div class="col d-flex align-items-center pt-4">
+                    <span class="pe-3 ps-1">2.</span>
+                    <div class="title-song d-flex flex-column justify-content-center">
+                      <h6>Ninna nanna per genitori disattenti</h6>
+                      <p>Pinguini Tattici Nucleari</p>
+                    </div>
+                  </div>
+                  <div class="col d-flex justify-content-end align-items-center"><p>1.646.987</p></div>
+                  <div class="col d-flex justify-content-end align-items-center pe-4"><p>2:28</p></div>
                 </div>
               </div>
-            </div> -->
-
-            <!-- lista canzoni -->
-
-            <div class="col">
-              <ul class="list-group list-group-horizontal">
-                <li class="list-group-item flex-grow-3">#</li>
-                <li class="list-group-item flex-grow-1 px-0">TITOLO</li>
-                <li class="list-group-item flex-grow-1 text-end">Riproduzioni</li>
-                <li class="list-group-item flex-grow-1 text-end"><i class="bi bi-clock"></i></li>
-              </ul>
             </div>
           </div>
         </div>
