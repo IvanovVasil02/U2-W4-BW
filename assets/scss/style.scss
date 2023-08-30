@@ -1,12 +1,16 @@
 @import "./variables";
 @import "./bootstrapOverrided.scss";
 
+@import "../css/circular-font.css";
+
 body {
   margin: 0;
   padding: 0;
   background-image: linear-gradient(#212121, #121212);
   background-repeat: no-repeat;
   color: #fff;
+  line-height: 2;
+  font-family: "circular";
 
   #side-bar,
   #main,
@@ -52,6 +56,14 @@ p {
 }
 
 #main-card {
+  h1 {
+    font-size: 4rem;
+    font-family: "Circular";
+    src: url(../fonts/CircularStd-Medium.otf);
+    font-weight: 500;
+    font-style: normal;
+  }
+
   background-image: linear-gradient(to bottom, #1e1e1e, #010101);
   padding: 0.2rem;
   border: none;
@@ -98,5 +110,16 @@ p {
     i {
       font-size: 3rem;
     }
+  }
+}
+
+#album-list-songs {
+  h6 {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  p {
+    color: $secondary;
+    margin: 0;
   }
 }
