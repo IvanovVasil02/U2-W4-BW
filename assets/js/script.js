@@ -1,6 +1,9 @@
-const URL = "https://striveschool-api.herokuapp.com/api/deezer/search?q={salmo}";
+const URL = "https://striveschool-api.herokuapp.com/api/deezer/search?q=bon jovie ";
+const currentUrl = window.location.search.includes("albumpage.html");
 const artistCard = "#artist-card";
-const contListSongs = document.getElementById("cont-list-songs");
+const albumCard = "#album-card";
+const artisListSongs = document.getElementById("cont-list-songs");
+const albumListSongs = document.getElementById("album-list-songs");
 
 const getResponse = () => {
   const response = fetch(URL);
@@ -8,28 +11,27 @@ const getResponse = () => {
   return response;
 };
 
-const loadMainCard = (cardName, coverImg) => {
+const loadMainCard = (cardName, title, coverImg) => {
   const mainCover = document.querySelector(cardName + " img");
-  console.log(mainCover);
+  const mainTitle = document.querySelector(cardName + " h1");
   mainCover.src = coverImg;
+  mainTitle.innerHTML = title;
 };
 
-const loadData = async () => {
+const loadArtistData = async () => {
   try {
     const resp = await getResponse();
-    console.log("risposta non convertita", resp);
 
-    let num;
+    let contListSongs;
 
     if (resp.ok) {
       const songs = await resp.json();
       /*  loadMainCard(artistCard, songs.data.artist.picture_big); */
 
-      /* console.log(songs.data.artist.picture_big); */
-      console.log(songs);
+      loadMainCard(artistCard, songs.data[0].title, songs.data[0].artist.picture_xl);
 
       for (let i = 0; i < 5; i++) {
-        contListSongs.innerHTML += `<div class="row">
+        artisListSongs.innerHTML += `<div class="row">
                                           <div class="col-auto d-flex justify-content-end align-items-center">
                                               <p>${i + 1}</p>
                                           </div>
@@ -59,6 +61,22 @@ const loadData = async () => {
   }
 };
 
+const loadAlbumtData = async () => {
+  try {
+    const resp = await getResponse();
+
+    if (resp.ok) {
+      const songs = await resp.json();
+      /*  loadMainCard(artistCard, songs.data.artist.picture_big); */
+      console.log(songs);
+
+      //   loadMainCard(artistCard, songs.data[0].title, songs.data[0].artist.picture_xl);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 window.onload = () => {
-  loadData();
+  loadArtistData();
 };

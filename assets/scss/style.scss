@@ -55,7 +55,7 @@ p {
   }
 }
 
-#main-card {
+#album-card {
   h1 {
     font-size: 4rem;
     font-family: "Circular";
@@ -121,5 +121,11 @@ p {
   p {
     color: $secondary;
     margin: 0;
+  }
+}
+
+#artist-card {
+  h1 {
+    text-shadow: 0 2px 5px #000;
   }
 }

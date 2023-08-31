@@ -10765,23 +10765,23 @@ p {
   max-height: 100px;
 }
 
-#main-card {
+#album-card {
   background-image: linear-gradient(to bottom, #1e1e1e, #010101);
   padding: 0.2rem;
   border: none;
 }
-#main-card h1, #main-card .h1 {
+#album-card h1, #album-card .h1 {
   font-size: 4rem;
   font-family: "Circular";
   src: url(../fonts/CircularStd-Medium.otf);
   font-weight: 500;
   font-style: normal;
 }
-#main-card img {
+#album-card img {
   max-height: 13rem;
   max-width: 13rem;
 }
-#main-card h6, #main-card .h6 {
+#album-card h6, #album-card .h6 {
   font-size: 0.8rem;
 }
 
@@ -10817,4 +10817,8 @@ p {
 #album-list-songs p {
   color: #6c757d;
   margin: 0;
+}
+
+#artist-card h1, #artist-card .h1 {
+  text-shadow: 0 2px 5px #000;
 }/*# sourceMappingURL=style.css.map */
