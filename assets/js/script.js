@@ -1,11 +1,17 @@
 const URL = "https://striveschool-api.herokuapp.com/api/deezer/search?q={salmo}";
-const artistCard = document.getElementById("artist-card");
+const artistCard = "#artist-card";
 const contListSongs = document.getElementById("cont-list-songs");
 
 const getResponse = () => {
   const response = fetch(URL);
 
   return response;
+};
+
+const loadMainCard = (cardName, coverImg) => {
+  const mainCover = document.querySelector(cardName + " img");
+  console.log(mainCover);
+  mainCover.src = coverImg;
 };
 
 const loadData = async () => {
@@ -17,6 +23,9 @@ const loadData = async () => {
 
     if (resp.ok) {
       const songs = await resp.json();
+      /*  loadMainCard(artistCard, songs.data.artist.picture_big); */
+
+      /* console.log(songs.data.artist.picture_big); */
       console.log(songs);
 
       for (let i = 0; i < 5; i++) {
