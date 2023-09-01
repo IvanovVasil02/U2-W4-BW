@@ -10735,6 +10735,28 @@ body #friends {
   height: 100%;
 }
 
+#sideBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#overFlow {
+  max-height: 665px;
+}
+
+#overFlow::-webkit-scrollbar {
+  width: auto;
+}
+
+#overFlow::-webkit-scrollbar-thumb {
+  background-color: grey;
+}
+
+#overFlow::-webkit-scrollbar-track {
+  background-color: black;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -10771,7 +10793,7 @@ p {
   border: none;
 }
 #album-card h1, #album-card .h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Circular";
   src: url(../fonts/CircularStd-Medium.otf);
   font-weight: 500;
@@ -10821,4 +10843,10 @@ p {
 
 #artist-card h1, #artist-card .h1 {
   text-shadow: 0 2px 5px #000;
+}
+
+#friends {
+  position: fixed;
+  top: 0;
+  right: 0;
 }/*# sourceMappingURL=style.css.map */
