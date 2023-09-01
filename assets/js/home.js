@@ -66,7 +66,7 @@ const loadAlbums = async (numero) => {
 
     mainListAlbums.innerHTML += `<div class="col>
                                     <div class="card bg-secondary p-2" style="max-heigth: 300px">
-                                    <img src="${album.cover_big}" class="card-img-top" alt="..." />
+                                    <a href="albumPage.html?id=${album.id}"><img src="${album.cover_big}" class="card-img-top" alt="..." /></a>
                                     <div class="card-body p-0">
                                         <h5 class="card-title pt-1">${album.title}</h5>
                                         <p class="card-text">La hotlist più hot di ${album.artist.name}</p>

@@ -34,9 +34,9 @@ const getSearchData = async (event) => {
       resultSearch.data.forEach((element) => {
         searchList.innerHTML += `<div class="col>
                                     <div class="card bg-secondary p-2" style="max-heigth: 300px">
-                                    <img src="${element.album.cover_big}" class="card-img-top" alt="..." />
+                                    <a href="albumPage.html?id=${element.album.id}"><img src="${element.album.cover_big}" class="card-img-top" alt="..." /></a>
                                     <div class="card-body p-0">
-                                        <h5 class="card-title pt-1">${element.album.title}</h5>
+                                        <h5 class="card-title pt-2">${element.album.title}</h5>
                                        
                                     </div>
                                     </div>
@@ -105,4 +105,6 @@ const loadAlbumtData = async () => {
   }
 };
 
-window.onload = () => {};
+window.onload = () => {
+  loadArtistData();
+};
