@@ -34,7 +34,7 @@ const loadPlaylists = async (numero) => {
 
     playlistContainers.innerHTML += `<div class="col playlist">
                                         <div class="row g-0 align-items-center bg-secondary rounded-2 overflow-hidden">
-                                        <div class="col-4"><a href="albumPage.html?id=${album.id}"><img src="${result.picture}" class="img-fluid h-100" alt="" /></a></div>
+                                        <div class="col-4"><a href="albumPage.html?id=${result.id}" ><img src="${result.picture}" class="img-fluid h-100" alt="" /></a></div>
                                         <div class="col-8 ps-2">
                                             <h5>${result.title}</h5>
                                         </div>

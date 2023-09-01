@@ -1,5 +1,5 @@
-const URL = "https://striveschool-api.herokuapp.com/api/deezer/search?q= ";
-const currentUrl = window.location.search.includes("albumpage.html");
+const URL = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
+
 const artistCard = "#artist-card";
 const albumCard = "#album-card";
 const artisListSongs = document.getElementById("cont-list-songs");
@@ -7,7 +7,6 @@ const albumListSongs = document.getElementById("album-list-songs");
 
 const getResponse = (search) => {
   const response = fetch(URL + search);
-
   return response;
 };
 
@@ -27,7 +26,7 @@ const getSearchData = async (event) => {
 
   try {
     if (response.ok) {
-      const resultSearch = await response.json();
+      const resultSearch = await response.json("bon jovie");
       console.log(resultSearch);
       const searchList = document.getElementById("search-list-albums");
 
@@ -48,9 +47,9 @@ const getSearchData = async (event) => {
   }
 };
 
-const loadArtistData = async () => {
+const loadArtistData = async (name) => {
   try {
-    const resp = await getResponse("bon jovie");
+    const resp = await getResponse(name);
 
     if (resp.ok) {
       const songs = await resp.json();
@@ -106,5 +105,8 @@ const loadAlbumtData = async () => {
 };
 
 window.onload = () => {
-  loadArtistData();
+  const urlId = new URL(document.location).searchParams;
+  const artistName = urlId.get("id");
+  console.log(artistName);
+  loadArtistData(artistName);
 };

@@ -6,10 +6,19 @@ const albumListSongs = document.getElementById("album-list-songs");
 const loadMainCard = (cardName, title, coverImg, artistName) => {
   const mainCover = document.querySelector(cardName + " img");
   const mainTitle = document.querySelector(cardName + " h1");
-  const mainName = document.querySelector(cardName + " h5");
+  const mainName = document.querySelector("#cont-name");
   mainCover.src = coverImg;
   mainTitle.innerHTML = title;
-  mainName.innerHTML = artistName;
+  mainName.innerHTML = `<a class="navbar-brand" href="artistPage.html?id=${artistName}">
+                        <img
+                          src="${coverImg}"
+                          alt="Logo"
+                          width="20"
+                          height="20"
+                          class="d-inline-block align-text-top rounded-circle"
+                        />
+                        <h5 class="d-inline-block">BootraP</h5>
+                      </a>`;
 };
 
 const loadData = async (albumId) => {
@@ -23,8 +32,6 @@ const loadData = async (albumId) => {
     });
     const albums = await response.json();
 
-    console.log(albums);
-
     loadMainCard(albumCard, albums.title, albums.cover_medium, albums.artist.name);
 
     albums.tracks.data.forEach((track, index) => {
@@ -33,7 +40,7 @@ const loadData = async (albumId) => {
                                       <span class="pe-3 ps-1">${index + 1}</span>
                                       <div class="title-song d-flex flex-column justify-content-center">
                                         <h6>${track.title}</h6>
-                                        <p>${albums.artist.name}</p>
+                                        <p>${track.artist.name}</p>
                                       </div>
                                     </div>
                                     <div class="col d-flex justify-content-end align-items-center">
