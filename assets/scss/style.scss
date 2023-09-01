@@ -154,3 +154,10 @@ p {
   top: 0;
   right: 0;
 }
+#playBar {
+  position: fixed;
+  bottom: 0;
+  max-height: 70px;
+  background-color: #1e1e1e;
+  width: 100%;
+}
