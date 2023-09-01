@@ -22,8 +22,6 @@ const loadArtistData = async () => {
   try {
     const resp = await getResponse();
 
-    let contListSongs;
-
     if (resp.ok) {
       const songs = await resp.json();
       /*  loadMainCard(artistCard, songs.data.artist.picture_big); */
