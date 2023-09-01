@@ -10845,6 +10845,14 @@ p {
   text-shadow: 0 2px 5px #000;
 }
 
+#main-card {
+  background-image: linear-gradient(to bottom, #1e1e1e, #010101);
+}
+
+.playlist .row {
+  background-image: linear-gradient(#2e2e2e, #2c2c2c, #2b2b2b);
+}
+
 #friends {
   position: fixed;
   top: 0;

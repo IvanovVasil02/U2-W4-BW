@@ -1,12 +1,12 @@
-const URL = "https://striveschool-api.herokuapp.com/api/deezer/search?q=bon jovie ";
+const URL = "https://striveschool-api.herokuapp.com/api/deezer/search?q= ";
 const currentUrl = window.location.search.includes("albumpage.html");
 const artistCard = "#artist-card";
 const albumCard = "#album-card";
 const artisListSongs = document.getElementById("cont-list-songs");
 const albumListSongs = document.getElementById("album-list-songs");
 
-const getResponse = () => {
-  const response = fetch(URL);
+const getResponse = (search) => {
+  const response = fetch(URL + search);
 
   return response;
 };
@@ -18,11 +18,39 @@ const loadMainCard = (cardName, title, coverImg) => {
   mainTitle.innerHTML = title;
 };
 
+const getSearchData = async (event) => {
+  event.preventDefault();
+  const ricerca = document.querySelector("form input").value;
+  console.log(ricerca);
+
+  const response = await getResponse(ricerca);
+
+  try {
+    if (response.ok) {
+      const resultSearch = await response.json();
+      console.log(resultSearch);
+      const searchList = document.getElementById("search-list-albums");
+
+      resultSearch.data.forEach((element) => {
+        searchList.innerHTML += `<div class="col>
+                                    <div class="card bg-secondary p-2" style="max-heigth: 300px">
+                                    <img src="${element.album.cover_big}" class="card-img-top" alt="..." />
+                                    <div class="card-body p-0">
+                                        <h5 class="card-title pt-1">${element.album.title}</h5>
+                                       
+                                    </div>
+                                    </div>
+                                  </div>`;
+      });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const loadArtistData = async () => {
   try {
-    const resp = await getResponse();
-
-    let contListSongs;
+    const resp = await getResponse("bon jovie");
 
     if (resp.ok) {
       const songs = await resp.json();
@@ -35,7 +63,7 @@ const loadArtistData = async () => {
                                           <div class="col-auto d-flex justify-content-end align-items-center">
                                               <p>${i + 1}</p>
                                           </div>
-                                          
+
                                           <div class="col-1 d-flex justify-content-end align-items-center px-2">
                                             <a href="#">
                                                 <img src="${songs.data[i].album.cover}" class="img-fluid pb-3" alt="" />
@@ -77,6 +105,4 @@ const loadAlbumtData = async () => {
   }
 };
 
-window.onload = () => {
-  loadArtistData();
-};
+window.onload = () => {};
