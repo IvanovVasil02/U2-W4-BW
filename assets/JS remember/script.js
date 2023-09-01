@@ -1,9 +1,8 @@
-/* const URL = "https://striveschool-api.herokuapp.com/api/deezer/search?q=eminem";
-const getData = async function () {
+/* const getData = async function () {
   const resp = await fetch(URL);
   const responseConvert = await resp.json();
-   console.log(resp);
-    console.log(responseConvert.data);
+  console.log(resp);
+  console.log(responseConvert.data);
   responseConvert.data.forEach((songObj, index) => {
     const container = document.getElementById("cont-song");
     container.innerHTML += `<div class="row">
@@ -18,7 +17,7 @@ const getData = async function () {
       </div>
       
       <div class="col d-flex justify-content-end align-items-center">
-        <p>${songObj.rank}</p>
+        <p>${songconst URL = "https://striveschool-api.herokuapp.com/api/deezer/search?q=eminem";Obj.rank}</p>
       </div>
       <div class="col d-flex justify-content-end align-items-center pe-4">
         <p>${songObj.duration}</p>
@@ -27,10 +26,8 @@ const getData = async function () {
 
     console.log(songObj);
   });
- 
 };
 
 window.onload = function () {
   getData();
-};
- */
+}; */
